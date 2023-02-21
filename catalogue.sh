@@ -43,4 +43,5 @@ cp configs/mongodb.repo /etc/yum.repos.d/mongodb.repo &>>${log_file}
 print_head "installing mongodb"
 yum install mongodb-org-shell -y &>>${log_file}
 
+print_head "log file"
 mongo --host mongodb.devopsb71service.site </app/schema/catalogue.js &>>${log_file}
