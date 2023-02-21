@@ -23,5 +23,4 @@ systemctl enable nginx &>>${log_file}
 print_head "starting nginx"
 systemctl start nginx &>>${log_file}
 
-
 }
