@@ -5,7 +5,7 @@ curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>${log_file}
 status_check $?
 
 print_head "Install NodeJS"
-yum install NodeJS -y &>>${log_file}
+yum install nodejs -y &>>${log_file}
 status_check $?
 
 print_head "Create User roboshop"
