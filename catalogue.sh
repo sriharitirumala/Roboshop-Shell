@@ -1,10 +1,10 @@
 source common.sh
 
-print_head  "configure nodejs repo"
+print_head  "Configure NodeJS Repo"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>${log_file}
 
-print_head "Install nodejs"
-yum install nodejs -y &>>${log_file}
+print_head "Install NodeJS"
+yum install NodeJS -y &>>${log_file}
 
 print_head "Create User roboshop"
 useradd roboshop &>>${log_file}
@@ -22,11 +22,11 @@ cd /app
 print_head "Extracting content"
 unzip /tmp/catalogue.zip &>>${log_file}
 
-print-head "Installing nodejs"
+print-head "Installing NodeJS"
 npm install &>>${log_file}
 
-print-head "Create systemD service files"
-cp ${code_dir} /configs/catalogue.service etc/systemd/system/catalogue.service &>>${log_file}
+print-head "Copy systemD service files"
+cp ${code_dir}/configs/catalogue.service etc/systemd/system/catalogue.service &>>${log_file}
 
 print-head "reload catalogue"
 systemctl daemon-reload &>>${log_file}
