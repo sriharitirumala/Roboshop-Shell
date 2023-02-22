@@ -21,7 +21,6 @@ if [ ! -d /app ]; then
 fi
 status_check $?
 
-
 print_head "Delete old content"
 rm -rf /app/* &>>${log_file}
 status_check $?
