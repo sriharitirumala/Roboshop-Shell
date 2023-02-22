@@ -44,5 +44,5 @@ print_head "installing mongodb client"
 yum install mongodb-org-shell -y &>>${log_file}
 
 print_head "load schema"
-mongo --host mongodb.devopsb71service.site </app/schema/catalogue.js &>>${log_file}
+mongo --host mongodb.devopsb71services.site </app/schema/catalogue.js &>>${log_file}
 
