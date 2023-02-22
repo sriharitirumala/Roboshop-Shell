@@ -35,7 +35,7 @@ print_head "Extracting content"
 unzip /tmp/catalogue.zip &>>${log_file}
 status_check $?
 
-print_head "Installing NodeJS"
+print_head "Installing NodeJS dependencies"
 npm install &>>${log_file}
 status_check $?
 
