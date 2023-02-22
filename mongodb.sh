@@ -13,6 +13,6 @@ print_head "Enable mongodb"
 systemctl enable mongod &>>${log_file}
 
 print_head "Start mongodb"
-systemctl start mongod &>>${log_file}
+systemctl restart mongod &>>${log_file}
 
 
