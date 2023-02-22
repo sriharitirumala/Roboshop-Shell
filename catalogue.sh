@@ -22,16 +22,16 @@ cd /app
 print_head "Extracting content"
 unzip /tmp/catalogue.zip &>>${log_file}
 
-print-head "Installing NodeJS"
+print_head "Installing NodeJS"
 npm install &>>${log_file}
 
-print-head "Copy systemD service files"
+print_head "Copy systemD service files"
 cp ${code_dir}/configs/catalogue.service etc/systemd/system/catalogue.service &>>${log_file}
 
 print-head "reload catalogue"
 systemctl daemon-reload &>>${log_file}
 
-print-head "enabling catalogue"
+print_head "enabling catalogue"
 systemctl enable catalogue &>>${log_file}
 
 print_head "restarting catalogue"
