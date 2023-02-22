@@ -16,7 +16,9 @@ fi
 status_check $?
 
 print_head "Create Application Directory to roboshop"
-mkdir /app &>>${log_file}
+if [ ! -d /app ]; then
+ mkdir /app &>>${log_file}
+fi
 status_check $?
 
 
