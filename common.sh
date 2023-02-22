@@ -27,7 +27,7 @@ NODEJS(){
   yum install nodejs -y &>>${log_file}
   status_check $?
 
-  print_head "Create User roboshop"
+  print_head "Create user roboshop"
   id roboshop &>>${log_file}
   if [ $? -ne 0 ]; then
    useradd roboshop &>>${log_file}
