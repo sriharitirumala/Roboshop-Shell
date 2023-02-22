@@ -3,8 +3,8 @@ source common.sh
 
 print_head "Installing nginx"
 yum install nginx -y &>>${log_file}
-echo -e "\e[33mSUCCESS\e[0m"
-status_check $?
+echo -e "\e[33mstatus_check $? \e[0m"
+
 
 
 print_head "Removing old content"
