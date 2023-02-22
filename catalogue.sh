@@ -28,7 +28,7 @@ npm install &>>${log_file}
 print_head "Copy systemD service files"
 cp ${code_dir}/configs/catalogue.service etc/systemd/system/catalogue.service &>>${log_file}
 
-print-head "reload catalogue"
+print_head "reload catalogue"
 systemctl daemon-reload &>>${log_file}
 
 print_head "enabling catalogue"
