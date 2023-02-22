@@ -16,6 +16,7 @@ print_head "Create Application Directory to roboshop"
 mkdir /app &>>${log_file}
 status_check $?
 
+
 print_head "Delete old content"
 rm -rf /app/* &>>${log_file}
 status_check $?
