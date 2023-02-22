@@ -9,23 +9,23 @@ fi
 mysql
 
 print_head "Disabling Mysql 8 version"
-dnf module disable mysql -y
+dnf module disable mysql -y &>>${log_file}
 status_check $?
 
 print_head "Installing mysql server"
-yum install mysql-community-server -y
+yum install mysql-community-server -y &>>${log_file}
 status_check $?
 
 print_head "Enabling mysql server"
-systemctl enable mysqld
+systemctl enable mysqld &>>${log_file}
 status_check $?
 
 print_head "Starting mysql server"
-systemctl start mysqld
+systemctl start mysqld &>>${log_file}
 status_check $?
 
 print_head "Set password"
-mysql_secure_installation --set-root-pass ${mysql_root_password}
+mysql_secure_installation --set-root-pass ${mysql_root_password} &>>${log_file}
 status_check $?
 
 
