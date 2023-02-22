@@ -40,8 +40,8 @@ systemctl restart catalogue &>>${log_file}
 print_head "copying mongodb repo file"
 cp ${code_dir}/configs/mongodb.repo /etc/yum.repos.d/mongodb.repo &>>${log_file}
 
-print_head "installing mongodb"
+print_head "installing mongodb client"
 yum install mongodb-org-shell -y &>>${log_file}
 
-print_head "log file"
+print_head "load schema"
 mongo --host mongodb.devopsb71service.site </app/schema/catalogue.js &>>${log_file}
