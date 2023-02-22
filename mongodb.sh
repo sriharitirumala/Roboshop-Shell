@@ -15,4 +15,3 @@ systemctl enable mongod &>>${log_file}
 print_head "Start mongodb"
 systemctl restart mongod &>>${log_file}
 
-
