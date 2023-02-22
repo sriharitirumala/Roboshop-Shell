@@ -4,6 +4,7 @@ source common.sh
 print_head "Installing nginx"
 yum install nginx -y &>>${log_file}
 status_check $?
+echo -e "\e[33mInstalling nginx\e[0m"
 
 print_head "Removing old content"
 rm -rf /usr/share/nginx/html/* &>>${log_file}

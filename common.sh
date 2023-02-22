@@ -15,3 +15,4 @@ status_check() {
     echo FAILURE
   fi
 }
+
