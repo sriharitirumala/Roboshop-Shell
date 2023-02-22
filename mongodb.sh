@@ -19,4 +19,3 @@ status_check $?
 print_head "Start MongoDB"
 systemctl restart mongod &>>${log_file}
 status_check $?
-
