@@ -31,6 +31,7 @@ schema_setup(){
      print_head "load schema"
      mongo --host mongodb.devopsb71services.site </app/schema/${component}.js &>>${log_file}
      status_check $?
+  fi
 }
 
 
