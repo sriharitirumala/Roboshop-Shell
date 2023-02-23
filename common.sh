@@ -55,7 +55,7 @@ schema_setup() {
     status_check $?
 
     print_head "Load Schema"
-    mysql -h mysql-dev.devopsb71srvices.site -uroot -p${mysql_root_password} < /app/schema/shipping.sql &>>${log_file}
+    mysql -h mysql-dev.devopsb71services.site -uroot -p${mysql_root_password} < /app/schema/shipping.sql &>>${log_file}
     status_check $?
   fi
 }
