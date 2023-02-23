@@ -149,7 +149,7 @@ python(){
   app_prereq_setup
 
   print_head "download python dependencies & packaging"
-  pipe3.6 install -r requirements.txt &>>${log_file}
+  pip3.6 install -r requirements.txt &>>${log_file}
   status_check $?
 
 
