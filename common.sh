@@ -135,7 +135,5 @@ java(){
 
   schema_setup
 
-
   systemd_setup
-
 }
