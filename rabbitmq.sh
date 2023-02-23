@@ -2,7 +2,7 @@ source common.sh
 
 roboshop_app_password=$1
 if [ -z "${roboshop_app_password}" ]; then
-  echo -e "\e[31mmissing mysql root password\e[0m"
+  echo -e "\e[31mrabbitmq app user password\e[0m"
   exit 1
 fi
 
@@ -31,7 +31,10 @@ status_check $?
 
 
 print_head "adding user app"
-rabbitmqctl add_user roboshop ${roboshop_app_password} &>>${log_file}
+rabbitmqctl list_user | grep roboshop &>>{log_file}
+if [ $? -ne 0 ]; then
+ rabbitmqctl add_user roboshop ${roboshop_app_password} &>>${log_file}
+fi
 status_check $?
 
 
