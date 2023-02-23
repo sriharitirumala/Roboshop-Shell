@@ -1,10 +1,10 @@
 source common.sh
 
-roboshop_app_password=$1
-if [ -z "${roboshop_app_password}" ]; then
-  echo -e "\e[31mrabbitmq app user password\e[0m"
-  exit 1
-fi
+  roboshop_app_password=$1
+  if [ -z "${roboshop_app_password}" ]; then
+    echo -e "\e[31mrabbitmq app user password\e[0m"
+    exit 1
+  fi
 
 print_head "setup erlang repos"
 curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash &>>${log_file}
