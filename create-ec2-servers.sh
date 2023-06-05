@@ -1,9 +1,9 @@
 #!/bin/bash
 
 ##### Change these values ###
-ZONE_ID="Z099374713TEKOU3HRH9T"
+ZONE_ID="Z009976058E0RTF536I6"
 DOMAIN="devopsb71services.site"
-SG_NAME="allow-all"
+SG_NAME="allow-me"
 #############################
 
 
